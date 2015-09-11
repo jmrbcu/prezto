@@ -44,6 +44,11 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  ~/.local/bin
+  ~/Applications
+  /Applications/MPlayerX.app/Contents/Resources/MPlayerX.mplayer.bundle/Contents/Resources/x86_64
+  /Users/jmrbcu/Development/android-sdk/tools
+  /Users/jmrbcu/Development/android-sdk/platform-tools
   $path
 )
 
