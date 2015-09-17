@@ -55,6 +55,9 @@ alias df="df -h"
 unalias py
 alias py="ipython"
 
+# nice colors for ls
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 
 if [ "$(uname)" = "Darwin" ]; then
     # Do something under Mac OS X platform
