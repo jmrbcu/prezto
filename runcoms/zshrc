@@ -52,9 +52,9 @@ bindkey -M viins ' ' magic-space
 # aliases
 alias du="du -h -s"
 alias df="df -h"
-unalias py
 alias py="ipython"
 alias subl=/Applications/Sublime\\\ Text.app/Contents/SharedSupport/bin/subl
+alias rm="rm"
 
 # nice colors for ls
 export LSCOLORS=ExFxBxDxCxegedabagacad
