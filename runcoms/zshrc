@@ -53,8 +53,8 @@ bindkey -M viins ' ' magic-space
 alias du="du -h -s"
 alias df="df -h"
 alias py="ipython"
-alias subl=/Applications/Sublime\\\ Text.app/Contents/SharedSupport/bin/subl
 alias rm="rm"
+alias rmhost="sed -i .bak '/$1/d' ~/.ssh/known_hosts"
 
 # nice colors for ls
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -66,8 +66,16 @@ if [ "$(uname)" = "Darwin" ]; then
 
     # Homebrew support
     export HOMEBREW_GITHUB_API_TOKEN=$(<~/.HOMEBREW_API_TOKEN)
+    
+    # sublime text shortcut
+    alias subl=/Applications/Sublime\\\ Text.app/Contents/SharedSupport/bin/subl
+
+    # Visual Studio Code support
+    code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+    source /usr/local/lib/dnx/bin/dnvm.sh
 else
     # Do something under Linux platform
     alias ls='ls -hla --color=auto'
 fi
+
 
